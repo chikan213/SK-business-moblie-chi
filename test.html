@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get to Know Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto Condensed', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('4.png');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column; /* 強制上下對齊 */
+            align-items: center;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .header {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            color: #ffa600;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1rem;
+            color: #fd05b3;
+        }
+
+        .video-container {
+            width: 100%;
+            max-width: 600px; /* 影片縮小尺寸 */
+            margin: 20px 0;
+        }
+
+        .video-container video {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .box-container {
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            line-height: 38px; /* 統一 line-height */
+        }
+
+        .box-container h2 {
+            font-size: 1.5rem;
+            color: #ffa600;
+            margin-bottom: 10px;
+        }
+
+        .box-container ul {
+            list-style: disc; /* 加上列點 */
+            text-align: center; /* 文字置中 */
+            padding-left: 20px;
+        }
+
+        .box-container ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .back-button img {
+            width: 60px;
+            border-radius: 100%;
+        }
+
+        /* 手機樣式 */
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .video-container {
+                max-width: 90%; /* 適配小螢幕影片尺寸 */
+            }
+
+            .box-container {
+                max-width: 90%; /* 框架適配小螢幕 */
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Get to Know Us</h1>
+        <p>Learn more about our values, goals, and what drives us every day.</p>
+    </div>
+    <div class="container">
+        <!-- 影片 -->
+        <div class="video-container">
+            <video autoplay muted loop>
+                <source src="handmade.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <!-- Our Brand -->
+        <div class="box-container">
+            <h2>Our Brand</h2>
+            <ul>
+                <li>Build a brand image centered around health and artisan craftsmanship</li>
+                <li>Highlight eco-friendly concepts in packaging design</li>
+            </ul>
+        </div>
+        <!-- Our Mission -->
+        <div class="box-container">
+            <h2>Our Mission</h2>
+            <ul>
+                <li>Provide healthy, high-quality food options and unique handcrafted products</li>
+                <li>Meet consumers' needs for refined tastes and lifestyle quality</li>
+            </ul>
+        </div>
+        <!-- Our Goals -->
+        <div class="box-container">
+            <h2>Our Goals</h2>
+            <ul>
+                <li>Establish a highly recognized brand in the food and jewelry market</li>
+                <li>Create a customer experience centered around health and craftsmanship</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; 2024 S & K Business. All Rights Reserved.
+    </div>
+    <button class="back-button" onclick="window.location.href='index.html'">
+        <img src="88.png" alt="Return to Home">
+    </button>
+</body>
+</html>

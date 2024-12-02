@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto Condensed', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('13.png');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; /* 電腦左右對齊 */
+            align-items: center; /* 垂直置中 */
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .contact-header {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .contact-header h1 {
+            font-size: 2rem;
+            color: #ff00cc;
+        }
+
+        .contact-header p {
+            font-size: 1rem;
+            color: #fd05b3;
+            margin: 10px auto;
+        }
+
+        .box-container {
+            flex: 1;
+            min-width: 45%; /* 框架左右對齊寬度 */
+            max-width: 45%;
+            margin-bottom: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            line-height: 38px; /* 新增 line-height */
+        }
+
+        .box-container h2 {
+            font-size: 1.5rem;
+            color: #ffa600;
+            margin-bottom: 10px;
+        }
+
+        .box-container form input,
+        .box-container form textarea,
+        .box-container form button {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .box-container form input,
+        .box-container form textarea {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+        }
+
+        .box-container form button {
+            background-color: #ffa600;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .box-container form button:hover {
+            background-color: #ff7700;
+        }
+
+        .box-container p {
+            font-size: 1rem;
+        }
+
+        .box-container a {
+            color: #ffa600;
+            text-decoration: none;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .back-button img {
+            width: 60px;
+            border-radius: 100%;
+        }
+
+        /* 手機樣式 */
+        @media screen and (max-width: 768px) {
+            .contact-container {
+                flex-direction: column; /* 手機上下對齊 */
+                align-items: center;
+            }
+
+            .box-container {
+                min-width: 100%; /* 滿版顯示 */
+                max-width: 100%;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-header">
+        <h1>联系我们</h1>
+        <p>有兴趣吗？联系我们，我们会尽快回复您。</p>
+    </div>
+    <div class="contact-container">
+        <!-- Send Us a Message -->
+        <div class="box-container">
+            <h2>给我们留言</h2>
+            <form action="#" method="POST">
+                <input type="text" name="name" placeholder="您的姓名" required>
+                <input type="email" name="email" placeholder="您的电子邮件" required>
+                <textarea name="message" rows="6" placeholder="您的信息" required></textarea>
+                <button type="submit">发送消息</button>
+            </form>
+        </div>
+        <!-- Contact Information -->
+        <div class="box-container">
+            <h2>联系方式</h2>
+            <p><strong>地址：</strong> Oscar By The Sea，将军澳，香港</p>
+            <p><strong>电子邮件：</strong> <a href="mailto:chikan213@gmail.com">chikan213@gmail.com</a></p>
+            <p><strong>电话：</strong> <a href="tel:+85291449139">+852 91449139</a></p>
+            <p><strong>营业时间：</strong><br>
+                周一至周五：上午 9：00 - 下午 6：00<br>
+                星期六： 上午 10：00 - 下午 2：00<br>
+                周日：关闭
+            </p>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; 2024 S & K Business. 保留所有权利。
+    </div>
+    <button class="back-button" onclick="window.location.href='index.html'">
+        <img src="88.png" alt="Return to Home">
+    </button>
+</body>
+</html>

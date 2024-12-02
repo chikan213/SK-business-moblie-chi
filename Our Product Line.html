@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Product Line</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto Condensed', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('19.png'); /* 背景圖片 */
+            background-size: cover;
+            background-position: center;
+            color: #333;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .header {
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            color: #ff69b4;
+        }
+
+        .product-line {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; /* 電腦左右對齊 */
+            align-items: flex-start; /* 垂直對齊 */
+            gap: 20px;
+        }
+
+        .product-card {
+            flex: 1;
+            min-width: 30%; /* 框架寬度一致 */
+            max-width: 30%;
+            margin-bottom: 20px;
+            background-color: #ffe4e1; /* 淡粉色背景 */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 300px; /* 照片大小：電腦模式 */
+            height: 300px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease; /* 放大過渡效果 */
+        }
+
+        .product-card img:hover {
+            transform: scale(1.2); /* 照片放大效果 */
+        }
+
+        .product-card h2 {
+            font-size: 1.5rem;
+            color: #ff69b4;
+            margin-bottom: 10px;
+        }
+
+        .product-card p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #fff;
+        }
+
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .back-button img {
+            width: 60px;
+            border-radius: 100%;
+        }
+
+        /* 手機樣式 */
+        @media screen and (max-width: 768px) {
+            .product-line {
+                flex-direction: column; /* 手機上下對齊 */
+                align-items: center;
+            }
+
+            .product-card {
+                min-width: 100%; /* 滿版顯示 */
+                max-width: 100%;
+                padding: 15px;
+            }
+
+            .product-card img {
+                width: 350px; /* 手機模式照片大小 */
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>我们的产品线</h1>
+        </div>
+        <div class="product-line">
+            <!-- Mineral Water -->
+            <div class="product-card">
+                <img src="777.jpg" alt="Mineral Water">
+                <h2>順水</h2>
+                <p>矿泉水，纯净清爽，自然解渴。它富含矿物质，可恢复活力、保湿并支持健康的生活方式。</p>
+            </div>
+            <!-- Homemade Snacks -->
+            <div class="product-card">
+                <img src="101.jpg" alt="Homemade Snacks">
+                <h2>自制小吃</h2>
+                <p>用爱精心制作的自制小吃提供有益健康的风味、新鲜的食材以及传统和关怀的舒适味道。</p>
+            </div>
+            <!-- Jade Jewelry -->
+            <div class="product-card">
+                <img src="000.png" alt="Jade Jewelry">
+                <h2>翡翠首饰</h2>
+                <p>玉石首饰，隽永优雅，象征着纯洁和繁荣。其鲜艳的色调反映了大自然的美丽和文化遗产。</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; 2024 S & K Business. 保留所有权利。
+    </div>
+    <button class="back-button" onclick="window.location.href='index.html'">
+        <img src="88.png" alt="Return to Home">
+    </button>
+</body>
+</html>
+
